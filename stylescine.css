@@ -1,0 +1,290 @@
+/* Resetting default font family */
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Styling links */
+a {
+  text-decoration: none;
+  color: white;
+  border-radius: 50px;
+}
+
+/* Header styles */
+header {
+  background: #34495e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-index {
+  grid-area: 1 / 1 / 12 / 12;
+}
+
+/* Body styles */
+body {
+  background: #ecf0f1;
+}
+
+footer p {
+  text-align: center;
+}
+
+.navbar {
+  margin: 10px;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 1em;
+}
+
+.navbar a {
+  flex-basis: 150px;
+  border: 3px solid rgba(0, 0, 0, 0.2);
+}
+
+/* Button styles */
+.botones {
+  background-color: #3498db;
+  color: #fff;
+  font-size: 30px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+  border-radius: 100px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.botones:hover {
+  background-color: #e52113;
+  color: aliceblue;
+}
+
+/* Image styling */
+.main-img {
+  width: 80vh;
+  height: 50vh;
+  filter: grayscale(100%);
+}
+
+/* Overlay styling */
+.relative-img {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(5, auto);
+}
+
+.overlay {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  z-index: 1;
+}
+
+.overlay p {
+  color: #ecf0f1;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 70px;
+  font-weight: bold;
+}
+
+/* Bot Index */
+.bot-index {
+  background-color: #011014;
+  border-radius: 0;
+}
+
+/* Movie List */
+.peliculas-lista {
+  background-color: #34495e;
+  height: 150px;
+  width: auto;
+  overflow: scroll;
+}
+
+.pelis a {
+  background-color: #011c23;
+}
+
+/* Q&A section styles */
+.qna {
+  background-color: #ecf0f1;
+  color: #34495e;
+  right: 10%;
+  top: 90%;
+  grid-area: 2/2/3/3;
+}
+
+/* Cards container styles */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-content: center;
+  gap: 15px;
+}
+
+/* Movie card styles */
+.pelis button {
+  border-radius: 100px;
+  background-color: #011c23;
+}
+
+/* Grid Container */
+.grid-container {
+  text-align: center;
+  border-radius: 15px;
+  padding: 10px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  outline: solid;
+}
+
+/* Boxing */
+.boxing {
+  margin: 10px;
+  box-sizing: content-box;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.687);
+  align-items: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  outline: solid rgb(0, 0, 139);
+}
+
+/* Combos */
+.combos {
+  background-color: #597088;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: auto;
+  width: auto;
+  text-align: center;
+}
+
+.combos img {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.special-combo {
+  border: solid rgb(255, 255, 255) 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+}
+
+.special-combo h3 {
+  margin: 0px;
+}
+
+/* Footer */
+footer {
+  margin-top: 3vh;
+  background-color: #597088;
+  color: #011c23;
+  height: 5vh;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  opacity: 90%;
+}
+
+/* Media queries */
+@media (max-width: 1500px) {
+  .main-img {
+    height: auto;
+    width: 50vh;
+  }
+  .grid-container {
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .overlay p {
+    font-size: 48px;
+  }
+  .overlay {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 1300px) {
+  .grid-container {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .overlay {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    z-index: 1;
+  }
+  .overlay p {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .main-img {
+    height: auto;
+    width: 50vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .botones {
+    font-size: 25px;
+    margin: 10px;
+    padding: 5px;
+  }
+  .main-img {
+    height: auto;
+    width: 40vh;
+  }
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  footer {
+    margin-top: 3vh;
+    background-color: #597088;
+    color: #011c23;
+    height: 3vh;
+    justify-content: center;
+    align-items: center;
+  }
+  .overlay p {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 500px) {
+  .main-img {
+    height: auto;
+    width: 30vh;
+  }
+  .grid-container {
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(1, auto);
+  }
+  .overlay p {
+    font-size: 30px;
+  }
+}
